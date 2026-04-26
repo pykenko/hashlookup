@@ -1,8 +1,9 @@
 from utils import *
 
-defaultmd5()
+# defaultmd5()
+defaultsha1()
 init()
 
 while True:
 	userInput = input("input a hash : ")
-	findmd5(userInput, dictio)
+	findhash(userInput, dictio)
