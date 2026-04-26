@@ -1,5 +1,12 @@
-This repo is not a project
+this is a small experiment to understand how services like crackstation achieve fast hash lookups
 
-Its just me a bored guy in a cafe that thought about how crackstation works because it seems very fast for your typical rainbow table attack so in my version i used a dictionary in python where in other languages you could call it hashmap, but i know this implementation is still bad because it has a lot of downsides like you cant use a super large wordlist
+instead of computing hashes on the fly this project precomputes hashes from a small wordlist
+and stores them in a dictionary hash -> plaintext for instant lookup
 
-In my defense this is just a simple implementation you could try to create the same logic inside of a database where you could store a precomputed hashes using a wordlist and possibly do the same amount of speed of crackstation
+this implementation uses Python dictionaries (hashmaps) which works well for small datasets
+However it does not scale large wordlists would require too much memory
+
+a more realistic approach would use a database to store precomputed hashes
+allowing efficient lookup while handling much larger datasets
+
+this is purely a learning project
