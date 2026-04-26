@@ -1,3 +1,5 @@
 def findhash(hashstring, dictio):
-	if dictio[hashstring] is not None:
+	if dictio.get(hashstring):
 		print(dictio[hashstring])
+	else:
+		print("hash not found")
